@@ -1,5 +1,6 @@
 package com.skilldistillery.filmquery.entities;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Film {
@@ -12,9 +13,42 @@ public class Film {
 	private double replacementCost;
 	private String rating;
 	private String specialFeatures;
-	public Film(int int1, String string, String string2, int int2, int int3, String string3, double double1,
-			String string4, String string5) {
-		// TODO Auto-generated constructor stub
+	private String language;
+	private List<Actor> actors;
+	
+	
+	
+	public Film(int id, String title, String description, int releaseYear, int languageId, int length, double replacementCost,
+			String rating, String specialFeatures, String language ) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.releaseYear = releaseYear;
+		this.languageId = languageId;
+		this.length = length;
+		this.replacementCost = replacementCost;
+		this.rating = rating;
+		this.specialFeatures = specialFeatures;
+		this.language = language;
+		
+		
+	
+	}
+	public Film() {
+		super();
+	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+	public List<Actor> getActors() {
+		return actors;
+	}
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
 	}
 	public int getId() {
 		return id;
@@ -74,12 +108,13 @@ public class Film {
 	public String toString() {
 		return "Film [id=" + id + ", title=" + title + ", description=" + description + ", releaseYear=" + releaseYear
 				+ ", languageId=" + languageId + ", length=" + length + ", replacementCost=" + replacementCost
-				+ ", rating=" + rating + ", specialFeatures=" + specialFeatures + "]";
+				+ ", rating=" + rating + ", specialFeatures=" + specialFeatures + ", language=" + language + ", actors="
+				+ actors + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(description, id, languageId, length, rating, releaseYear, replacementCost, specialFeatures,
-				title);
+		return Objects.hash(actors, description, id, language, languageId, length, rating, releaseYear, replacementCost,
+				specialFeatures, title);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -90,7 +125,8 @@ public class Film {
 		if (getClass() != obj.getClass())
 			return false;
 		Film other = (Film) obj;
-		return Objects.equals(description, other.description) && id == other.id && languageId == other.languageId
+		return Objects.equals(actors, other.actors) && Objects.equals(description, other.description) && id == other.id
+				&& Objects.equals(language, other.language) && languageId == other.languageId
 				&& Objects.equals(length, other.length) && Objects.equals(rating, other.rating)
 				&& Objects.equals(releaseYear, other.releaseYear)
 				&& Double.doubleToLongBits(replacementCost) == Double.doubleToLongBits(other.replacementCost)

@@ -12,7 +12,7 @@ public class Actor {
 	  //methods
 	  
 	  public Actor() {
-		  
+		  super();
 	  }
 	  
 	  public Actor(int id, String fn, String ln) {
@@ -20,10 +20,10 @@ public class Actor {
 		  this.firstName = fn;
 		  this.lastName = ln;
 	  }
-
-	@Override
+	  
+	  @Override
 	public String toString() {
-		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", films=" + films + "]";
 	}
 
 	public int getId() {
