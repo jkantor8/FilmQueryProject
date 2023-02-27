@@ -246,7 +246,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				film.setRating(filmResult.getString("rating"));
 				film.setSpecialFeatures(filmResult.getString("special_Features"));
 				film.setLanguage(filmResult.getString("language.name"));
-				film.setActors(findActorsByFilmId(filmResult.getInt("film.id")));
+//				film.setActors(findActorsByFilmId(filmResult.getInt("film.id")));
 
 				
 				actors = findActorsByFilmId(film.getId());
