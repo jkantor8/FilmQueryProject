@@ -80,7 +80,7 @@ public class FilmQueryApp {
 	private void byKeyword(Scanner input) {
 		System.out.println("Enter a keyword");
 		try {
-			String keyword = input.nextLine();
+			String keyword = input.next();
 			List<Film> films = db.findFilmsByKeyword(keyword);
 			if (films.size() > 0) {
 				for (Film film : films) {

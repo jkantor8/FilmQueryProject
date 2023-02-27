@@ -107,10 +107,9 @@ public class Film {
 	}
 	@Override
 	public String toString() {
-		return "Film [id=" + id + ", title=" + title + ", description=" + description + ", releaseYear=" + releaseYear
-				+ ", languageId=" + languageId + ", length=" + length + ", replacementCost=" + replacementCost
-				+ ", rating=" + rating + ", specialFeatures=" + specialFeatures + ", language=" + language + ", actors="
-				+ actors + "]";
+		return "Film id: " + id + ", Title:" + title + ", Description: " + description + ", Release Year: " + releaseYear
+				 + ", Length: " + length + ", Rating: " + rating + ", Special Features: " + specialFeatures + ", Language: " + language
+				 + ", Cast: " + actors;
 	}
 	@Override
 	public int hashCode() {
