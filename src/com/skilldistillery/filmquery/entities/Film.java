@@ -32,9 +32,10 @@ public class Film {
 		this.specialFeatures = specialFeatures;
 		this.language = language;
 		
-		
-	
 	}
+
+	
+	
 	public Film() {
 		super();
 	}

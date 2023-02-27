@@ -1,5 +1,6 @@
 package com.skilldistillery.filmquery.app;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -62,8 +63,8 @@ public class FilmQueryApp {
 	private void byFilmId(Scanner input) {
 		System.out.println("Enter a film ID");
 		try {
-			int id = input.nextInt();
-			Film film = db.findFilmById(id);
+			int filmId = input.nextInt();
+			Film film = db.findFilmById(filmId);
 			if (film != null) {
 				System.out.println(film);
 			} else {
